@@ -1,0 +1,20 @@
+columns:
+    name:
+        label: 'timfoerster.leaflet::lang.maps.name.label'
+        type: text
+        searchable: true
+        sortable: true
+    object_count:
+        label: 'timfoerster.leaflet::lang.maps.object_count'
+        type: relation
+        relation: objects_count
+        valueFrom: count
+        default: 0
+        sortable: false
+    created_at:
+        label: 'timfoerster.leaflet::lang.common.created_at'
+        type: timesince
+    updated_at:
+        label: 'timfoerster.leaflet::lang.common.updated_at'
+        type: timesince
+

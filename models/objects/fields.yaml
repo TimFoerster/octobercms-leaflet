@@ -1,0 +1,43 @@
+fields:
+    name:
+        label: 'timfoerster.leaflet::lang.objects.name.label'
+        span: auto
+        placeholder: 'timfoerster.leaflet::lang.objects.name.placeholder'
+        default: ''
+        cssClass: ''
+        required: 1
+        type: text
+        commentAbove: 'timfoerster.leaflet::lang.objects.name.comment'
+    type:
+        label: 'timfoerster.leaflet::lang.objects.type.label'
+        options:
+            marker: 'timfoerster.leaflet::lang.objects.type.marker'
+            circle: 'timfoerster.leaflet::lang.objects.type.circle'
+            polygon: 'timfoerster.leaflet::lang.objects.type.polygon'
+        span: auto
+        placeholder: 'timfoerster.leaflet::lang.objects.type.placeholder'
+        default: ''
+        type: dropdown
+        commentAbove: 'timfoerster.leaflet::lang.objects.type.comment'
+    position:
+        label: 'timfoerster.leaflet::lang.objects.position.label'
+        span: auto
+        placeholder: 'timfoerster.leaflet::lang.objects.position.placeholder'
+        default: ''
+        cssClass: ''
+        required: 1
+        type: text
+        commentAbove: 'timfoerster.leaflet::lang.objects.position.comment'
+    parameters:
+        label: 'timfoerster.leaflet::lang.objects.parameters.label'
+        size: small
+        language: json
+        span: auto
+        type: codeeditor
+        commentAbove: 'timfoerster.leaflet::lang.objects.parameters.comment'
+    popup:
+        label: 'timfoerster.leaflet::lang.objects.popup.label'
+        size: small
+        span: full
+        type: richeditor
+        commentAbove: 'timfoerster.leaflet::lang.objects.popup.comment'

@@ -1,0 +1,12 @@
+name: Maps
+form: $/timfoerster/leaflet/models/maps/fields.yaml
+modelClass: TimFoerster\Leaflet\Models\Maps
+defaultRedirect: timfoerster/leaflet/maps
+create:
+    redirect: 'timfoerster/leaflet/maps/update/:id'
+    redirectClose: timfoerster/leaflet/maps
+update:
+    redirect: timfoerster/leaflet/maps
+    redirectClose: timfoerster/leaflet/maps
+preview:
+    title: View

@@ -1,0 +1,20 @@
+columns:
+    name:
+        label: 'timfoerster.leaflet::lang.objects.name.label'
+        type: text
+        searchable: true
+        sortable: false
+    type:
+        label: 'timfoerster.leaflet::lang.objects.type.label'
+        type: partial
+        path: ~/plugins/timfoerster/leaflet/models/objects/_type_column.htm
+    position:
+        label: 'timfoerster.leaflet::lang.objects.position.label'
+        type: text
+    created_at:
+        label: 'timfoerster.leaflet::lang.common.created_at'
+        type: timesince
+    updated_at:
+        label: 'timfoerster.leaflet::lang.common.updated_at'
+        type: timesince
+

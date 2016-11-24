@@ -1,0 +1,24 @@
+{% set map = __SELF__.map %}
+
+<div id="{{ map.fieldId }}" style="height: {{ map.height }}"></div>
+
+{% put scripts %}
+    <script>
+
+        var {{ map.fieldId }} = L.map('{{ map.fieldId }}').setView([{{ map.latitude }}, {{ map.longitude }}], {{ map.zoom }});
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={{ map.mapboxAccessToken }}', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            maxZoom: {{ map.maxZoom }},
+            id: '{{ map.mapboxId }}',
+            accessToken: '{{ map.mapboxAccessToken }}'
+        }).addTo({{ map.fieldId }});
+
+        {% for object in map.objects %}
+            var mapObject{{ loop.index }} = L.{{ object.type }}([{{ object.position|trim }}]{% if object.parameters %} , {{ object.parameters|replace({"\n":'', "\r":''})|trim|raw }} {% endif %}).addTo({{ map.fieldId }});
+            {% if object.popup %}
+                mapObject{{ loop.index }}.bindPopup("{{ object.popup|replace({"\n":'', "\r":''})|trim|raw }}");
+            {% endif %}
+        {% endfor %}
+    </script>
+{% endput %}

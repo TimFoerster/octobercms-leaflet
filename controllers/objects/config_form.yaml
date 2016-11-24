@@ -1,0 +1,10 @@
+name: Objects
+form: $/timfoerster/leaflet/models/objects/fields.yaml
+modelClass: TimFoerster\Leaflet\Models\Objects
+defaultRedirect: timfoerster/leaflet/objects
+create:
+    redirect: 'timfoerster/leaflet/objects/update/:id'
+    redirectClose: timfoerster/leaflet/objects
+update:
+    redirect: timfoerster/leaflet/objects
+    redirectClose: timfoerster/leaflet/objects

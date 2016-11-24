@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table timfoerster_leaflet_maps'
+    - builder_table_create_timfoerster_leaflet_maps.php
+1.0.3:
+    - 'Created table timfoerster_leaflet_objects'
+    - builder_table_create_timfoerster_leaflet_objects.php
