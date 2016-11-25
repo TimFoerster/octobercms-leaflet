@@ -26,6 +26,7 @@ tabs:
             type: text
             comment: 'timfoerster.leaflet::lang.maps.mapbox_id.comment'
             tab: Mapbox
+            required: 1
         mapboxAccessToken:
             label: 'timfoerster.leaflet::lang.maps.mapbox_access_token.label'
             size: tiny
@@ -34,3 +35,4 @@ tabs:
             type: textarea
             comment: 'timfoerster.leaflet::lang.maps.mapbox_access_token.comment'
             tab: Mapbox
+            required: 1

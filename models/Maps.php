@@ -13,6 +13,7 @@ class Maps extends Model
      * Validation
      */
     public $rules = [
+        'name' => 'required'
     ];
 
     /*

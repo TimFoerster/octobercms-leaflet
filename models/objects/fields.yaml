@@ -19,6 +19,7 @@ fields:
         default: ''
         type: dropdown
         commentAbove: 'timfoerster.leaflet::lang.objects.type.comment'
+        required: 1
     position:
         label: 'timfoerster.leaflet::lang.objects.position.label'
         span: auto

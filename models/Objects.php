@@ -17,7 +17,31 @@ class Objects extends Model
      * Validation
      */
     public $rules = [
+        'name' => 'required',
+        'type' => 'in:marker,circle,polygon',
+        'position' => 'required',
     ];
+
+    public function beforeValidate()
+    {
+        if(!$this->type) {
+            $this->rules['type'] = 'required';
+            return;
+        }
+
+        $regExNumber = '[-+]?[0-9]*\.?[0-9]+';
+        $latLang = $regExNumber.', ?'.$regExNumber;
+
+        switch ($this->type) {
+            case 'marker' :
+            case 'circle' :
+                $this->rules['position'] = 'regex:/^('.$latLang.')$/';
+                break;
+            case 'polygon' :
+                $this->rules['position'] = 'regex:/^(\['.$latLang.'\])(, ?\['.$latLang.'\])*$/';
+                break;
+        }
+    }
 
     /*
      * Disable timestamps by default.
@@ -29,11 +53,5 @@ class Objects extends Model
      * @var string The database table used by the model.
      */
     public $table = 'timfoerster_leaflet_objects';
-
-    /*
-    public $belongsTo = [
-        'map' => ['TimFoerster\Leaflet\Models\Maps'],
-    ];
-    */
 
 }
