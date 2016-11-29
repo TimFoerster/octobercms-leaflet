@@ -2,7 +2,7 @@ plugin:
     name: 'timfoerster.leaflet::lang.plugin.name'
     description: 'timfoerster.leaflet::lang.plugin.description'
     author: 'Tim Foerster'
-    icon: oc-icon-map-marker
+    icon: icon-map-marker
     homepage: 'https://github.com/TimFoerster/octobercms-leaflet'
 navigation:
     main-menu-item:
