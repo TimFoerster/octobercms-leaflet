@@ -6,3 +6,4 @@
 1.0.3:
     - 'Created table timfoerster_leaflet_objects'
     - builder_table_create_timfoerster_leaflet_objects.php
+1.0.4: Changed default marker icon
