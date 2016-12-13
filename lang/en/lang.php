@@ -3,6 +3,12 @@
         'name' => 'Leaflet',
         'description' => 'Integration of Leaflet',
     ],
+    'permissions' => [
+        'maps' => [
+            'tab' => 'Maps',
+            'label' => 'Manage the maps with objects'
+        ]
+    ],
     'common' => [
         'created_at' => 'Created at',
         'updated_at' => 'Updated at',

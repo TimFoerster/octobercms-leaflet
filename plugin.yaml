@@ -9,3 +9,4 @@ navigation:
         label: Maps
         url: timfoerster/leaflet/maps
         icon: icon-map-marker
+        permissions: ['timfoerster.leaflet.*']
