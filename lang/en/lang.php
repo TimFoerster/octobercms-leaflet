@@ -77,6 +77,11 @@
             'title' => 'Map',
             'description' => 'Map to display',
         ],
+        'show_only_object' => [
+            'title' => 'Object/-s',
+            'description' => 'Displays only one element or all objects.',
+            'all' => 'All'
+        ],
         'fieldId' => [
             'title' => 'Element ID',
             'description' => 'Element ID of the map div container.',

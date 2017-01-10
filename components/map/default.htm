@@ -27,7 +27,7 @@
         }).addTo({{ map.fieldId }});
 
         var paramters = {};
-        {% for object in map.objects %}
+        {% for object in map.objectsToDisplay %}
             parameters = {% if object.parameters %} {{ object.parameters|replace({"\n":'', "\r":''})|trim|raw }} {% else %} {} {% endif %};
             {% if object.type == 'marker' %}
                 {% if object.icon is not empty %}

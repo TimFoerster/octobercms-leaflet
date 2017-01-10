@@ -8,3 +8,4 @@
     - builder_table_create_timfoerster_leaflet_objects.php
 1.0.4: Changed default marker icon
 1.0.5: !!! Added permissions to manage maps. Make sure to add the specifc permission to your users.
+1.0.6: Added the option to display only one object on the map.
