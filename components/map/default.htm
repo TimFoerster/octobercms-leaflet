@@ -19,13 +19,19 @@
             tooltipAnchor: [16, -28]
         });
 
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={{ map.mapboxAccessToken }}', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-            maxZoom: {{ map.maxZoom }},
-            id: '{{ map.mapboxId }}',
-            accessToken: '{{ map.mapboxAccessToken }}'
-        }).addTo({{ map.fieldId }});
-
+        {% if map.mapboxAccessToken %}
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={{ map.mapboxAccessToken }}', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                maxZoom: {{ map.maxZoom }},
+                id: '{{ map.mapboxId }}',
+                accessToken: '{{ map.mapboxAccessToken }}'
+            }).addTo({{ map.fieldId }});
+        {% else %}
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+                maxZoom: {{ map.maxZoom }}
+            }).addTo({{ map.fieldId }});
+        {% endif %}
         var paramters = {};
         {% for object in map.objectsToDisplay %}
             parameters = {% if object.parameters %} {{ object.parameters|replace({"\n":'', "\r":''})|trim|raw }} {% else %} {} {% endif %};

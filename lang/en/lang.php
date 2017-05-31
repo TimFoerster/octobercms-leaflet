@@ -34,6 +34,10 @@
                 'heading' => 'Providers',
                 'comment' => 'Select one provider that is used to display the map (only Mapbox supported right now).',
             ],
+            'osm' => [
+                'heading' => 'Open Street Maps',
+                'comment' => 'OSM is the fallback provider. You do not need any configuration.',
+            ],
             'mapbox' => [
                 'heading' => 'Mapbox',
                 'comment' => 'For using Mapbox register at https://www.mapbox.com and create a project under https://www.mapbox.com/studio/classic/projects/. After that insert the map id and your public API token',

@@ -13,6 +13,12 @@ fields:
         comment: 'timfoerster.leaflet::lang.maps.form.providers.comment'
 tabs:
     fields:
+        OpenStreetMaps:
+            label: 'timfoerster.leaflet::lang.maps.form.osm.heading'
+            span: full
+            type: section
+            comment: 'timfoerster.leaflet::lang.maps.form.osm.comment'
+            tab: OpenStreetMaps
         Mapbox:
             label: 'timfoerster.leaflet::lang.maps.form.mapbox.heading'
             span: full
