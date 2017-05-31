@@ -8,6 +8,7 @@
                                
 * Map
 * Provider:
+  * Open Street Maps
   * Mapbox
 * Layers:
   * Marker
@@ -19,6 +20,9 @@
 # Example
 
 This example is build on [quick start](http://leafletjs.com/examples/quick-start/) example from leaflet.
+
+## Open Street Maps
+No configuration needed, continue with _create a new map_.
 
 ## Mapbox
 1. You require an [Mapbox](https://www.mapbox.com/studio/) account.
