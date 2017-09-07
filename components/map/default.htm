@@ -44,7 +44,7 @@
             {% endif %}
             var mapObject{{ loop.index }} = L.{{ object.type }}([{{ object.position|trim }}], parameters).addTo({{ map.fieldId }});
             {% if object.popup %}
-                mapObject{{ loop.index }}.bindPopup("{{ object.popup|replace({"\n":'', "\r":''})|trim|raw }}");
+                mapObject{{ loop.index }}.bindPopup('{{ object.popup|replace({"\n":'', "\r":''})|trim|raw }}');
             {% endif %}
         {% endfor %}
     </script>
