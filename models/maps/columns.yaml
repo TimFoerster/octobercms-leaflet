@@ -6,7 +6,6 @@ columns:
         sortable: true
     object_count:
         label: 'timfoerster.leaflet::lang.maps.object_count'
-        type: relation
         relation: objects_count
         valueFrom: count
         default: 0
