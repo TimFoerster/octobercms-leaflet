@@ -65,6 +65,13 @@ class Map extends \Cms\Classes\ComponentBase
                 'type' => 'string',
                 'required' => true,
             ],
+            'scrollWheelZoom' => [
+                'title' => 'timfoerster.leaflet::lang.component.scroll_wheel_zoom.title',
+                'description' => 'timfoerster.leaflet::lang.component.scroll_wheel_zoom.description',
+                'default' => true,
+                'type' => 'checkbox',
+                'required' => true,
+            ],
             //Waiting for taglist support in components
             /*
             'objectDisplayList' => [
@@ -127,6 +134,7 @@ class Map extends \Cms\Classes\ComponentBase
         $map->latitude = $this->property('latitude');
         $map->longitude = $this->property('longitude');
         $map->zoom = $this->property('zoom');
+        $map->scrollWheelZoom = $this->property('scrollWheelZoom');
         $map->height = $this->property('height');
 
         $showOnlyObject = $this->property('showOnlyObject');

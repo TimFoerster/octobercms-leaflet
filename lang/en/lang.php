@@ -103,9 +103,14 @@
             'description' => 'Latitude of the map frame.',
         ],
         'zoom' => [
-            'title' => 'Zoom',
+            'title' => 'Zoom Level',
             'description' => 'Initial zoom level of the map.',
         ],
+        'scroll_wheel_zoom' => [
+            'title' => 'Scroll Wheel Zoom',
+            'description' => 'Enable zoom when scrolling.',
+        ],
+
 
     ]
 ];

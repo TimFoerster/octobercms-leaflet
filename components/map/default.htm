@@ -5,7 +5,7 @@
 {% put scripts %}
     <script>
 
-        var {{ map.fieldId }} = L.map('{{ map.fieldId }}').setView([{{ map.latitude }}, {{ map.longitude }}], {{ map.zoom }});
+        var {{ map.fieldId }} = L.map('{{ map.fieldId }}', { scrollWheelZoom: {{ map.scrollWheelZoom  }} }).setView([{{ map.latitude }}, {{ map.longitude }}], {{ map.zoom }});
 
         var defaultIcon = L.icon({
             iconUrl: '/plugins/timfoerster/leaflet/assets/leaflet/images/marker-icon.png',
