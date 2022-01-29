@@ -21,14 +21,14 @@
 
         {% if map.mapboxAccessToken %}
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={{ map.mapboxAccessToken }}', {
-                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors, Imagery © <a href="http://mapbox.com">Mapbox</a>',
                 maxZoom: {{ map.maxZoom }},
                 id: '{{ map.mapboxId }}',
                 accessToken: '{{ map.mapboxAccessToken }}'
             }).addTo({{ map.fieldId }});
         {% else %}
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors',
                 maxZoom: {{ map.maxZoom }}
             }).addTo({{ map.fieldId }});
         {% endif %}
@@ -44,7 +44,7 @@
             {% endif %}
             var mapObject{{ loop.index }} = L.{{ object.type }}([{{ object.position|trim }}], parameters).addTo({{ map.fieldId }});
             {% if object.popup %}
-                mapObject{{ loop.index }}.bindPopup(`{{ object.popup|replace({"\n":'', "\r":''})|trim|raw }}`);
+                mapObject{{ loop.index }}.bindPopup(`{{ html_clean(object.popup|replace({"\n":'', "\r":''})|trim)|raw }}`);
             {% endif %}
         {% endfor %}
     </script>
