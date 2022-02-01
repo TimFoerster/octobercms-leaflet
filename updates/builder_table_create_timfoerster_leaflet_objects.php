@@ -9,7 +9,7 @@ class BuilderTableCreateTimfoersterLeafletObjects extends Migration
     {
         Schema::create('timfoerster_leaflet_objects', function($table)
         {
-            $table->engine = 'InnoDB';
+            
             $table->increments('id');
             $table->integer('maps_id')->unsigned()->nullable();
             $table->string('name', 255);

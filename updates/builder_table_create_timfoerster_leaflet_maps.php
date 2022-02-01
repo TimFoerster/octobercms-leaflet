@@ -9,7 +9,7 @@ class BuilderTableCreateTimfoersterLeafletMaps extends Migration
     {
         Schema::create('timfoerster_leaflet_maps', function($table)
         {
-            $table->engine = 'InnoDB';
+            
             $table->increments('id');
             $table->string('name', 255);
             $table->integer('maxZoom')->default(18);
