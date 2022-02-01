@@ -38,7 +38,7 @@ No configuration needed, continue with _create a new map_.
 1. Create a new map
 1. Insert a name and copy and paste your Mapbox project id and your API access token.
 1. After that you can add objects at the buttom.
-1. Possible parameters for objects can be found on [Leaflet documentation](http://leafletjs.com/reference-1.0.2.html). 
+1. Possible parameters for objects can be found on [Leaflet documentation](http://leafletjs.com/reference.html). 
 
 ## Display map
 
