@@ -6,15 +6,15 @@
 1.0.3:
     - 'Created table timfoerster_leaflet_objects'
     - builder_table_create_timfoerster_leaflet_objects.php
-1.0.4: Changed default marker icon
-1.0.5: !!! Added permissions to manage maps. Make sure to add the specifc permission to your users.
-1.0.6: Added the option to display only one object on the map.
+1.0.4: 'Changed default marker icon'
+1.0.5: '!!! Added permissions to manage maps. Make sure to add the specifc permission to your users.'
+1.0.6: 'Added the option to display only one object on the map.'
 1.0.7:
     -  'Added Open Street Maps provider (new default provider)'
     -  'Updating to leaflet v1.0.3'
-1.0.8: Fixed bug that a map was not displayed when a table was added to a popup.
-1.0.9: Fixing bug list column type "relation"
-1.0.10: Swap out single quotes for backticks
+1.0.8: 'Fixed bug that a map was not displayed when a table was added to a popup.'
+1.0.9: 'Fixing bug list column type relation'
+1.0.10: 'Swap out single quotes for backticks'
 1.1.0:
     - 'Added option to disable scroll wheel zoom'
     - 'Sanitise Popup'
